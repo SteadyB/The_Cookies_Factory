@@ -1,9 +1,8 @@
 <?php
 session_start();
 if(!empty ($_SESSION)) : ?>
-<?php header('Location: http://127.0.0.1:8000/index.php'); ?>
+<?php header('Location: http://localhost:8000/index.php'); ?>
 <?php endif; ?>
-
 
 <?php
 require 'inc/head.php';
@@ -11,7 +10,7 @@ require 'inc/head.php';
 <?php if (!empty($_POST)) : ?>
     <?php $_SESSION["user_name"] = $_POST["loginname"]; ?>
     <div class="text-center">
-        <a href="http://127.0.0.1:8000/index.php">
+        <a href="http://localhost:8000/index.php">
             <button class="col-12 btn btn-warning" type="button">Back to Shop page ...</button>
         </a>
         <h1>Welcome in The Cookie Factory <?php echo $_SESSION['user_name'] ?> </h1>

@@ -10,7 +10,6 @@ session_start();
      }
      $_SESSION[$cookieId] = $_SESSION[$cookieId] + 1;
      $_SESSION['cookies'] = $_SESSION['cookies'] + 1;
-
  }?>
 
 <?php
@@ -24,9 +23,11 @@ require 'inc/head.php';
         <figcaption class="caption">
           <h3>Pecan nuts</h3>
           <p>Cooked by Penny !</p>
+            <?php if(!empty($_SESSION)) : ?>
           <a  href="?add_to_cart=46" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
           </a>
+            <?php endif;?>
             <p> <?php if (key_exists('cookie46', $_SESSION)) {
               echo  $_SESSION['cookie46'] ." in the cart"; } ?></p>
             <p> <?php if (!key_exists('cookie46', $_SESSION)) {
@@ -40,9 +41,11 @@ require 'inc/head.php';
         <figcaption class="caption">
           <h3>Chocolate chips</h3>
           <p>Cooked by Bernadette !</p>
+            <?php if(!empty($_SESSION['user_name'])) : ?>
           <a  href="?add_to_cart=36" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
           </a>
+            <?php endif;?>
             <p> <?php if (key_exists('cookie36', $_SESSION)) {
                     echo  $_SESSION['cookie36'] ." in the cart"; } ?></p>
             <p> <?php if (!key_exists('cookie36', $_SESSION)) {
@@ -56,9 +59,11 @@ require 'inc/head.php';
         <figcaption class="caption">
           <h3>Chocolate cookie</h3>
           <p>Cooked by Bernadette !</p>
-          <a  href="?add_to_cart=58" class="btn btn-primary">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
-          </a>
+            <?php if(!empty($_SESSION)) : ?>
+              <a  href="?add_to_cart=58" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
+              </a>
+            <?php endif;?>
             <p> <?php if (key_exists('cookie58', $_SESSION)) {
                     echo  $_SESSION['cookie58'] ." in the cart"; } ?></p>
             <p> <?php if (!key_exists('cookie58', $_SESSION)) {
@@ -72,9 +77,11 @@ require 'inc/head.php';
         <figcaption class="caption">
           <h3>M&M's&copy; cookies</h3>
           <p>Cooked by Penny !</p>
-          <a  href="?add_to_cart=32" class="btn btn-primary">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
-          </a>
+            <?php if(!empty($_SESSION)) : ?>
+              <a  href="?add_to_cart=32" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to cart
+              </a>
+            <?php endif;?>
             <p> <?php if (key_exists('cookie32', $_SESSION)) {
                     echo  $_SESSION['cookie32'] ." in the cart"; } ?></p>
             <p> <?php if (!key_exists('cookie32', $_SESSION)) {

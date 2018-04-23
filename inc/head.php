@@ -1,10 +1,9 @@
 <?php
 if (!empty($_POST) && key_exists('logout', $_POST)) {
     if ($_POST['logout'] === 'LOGOUT') session_destroy();
-        header('Location: http://127.0.0.1:8000/index.php');
+        header('Location: http://localhost:8000/index.php');
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
